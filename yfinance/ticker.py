@@ -39,6 +39,9 @@ class Ticker(TickerBase):
     def __repr__(self):
         return 'yfinance.Ticker object <%s>' % self.ticker
 
+    def __str__(self):
+        return self.ticker
+
     def _download_options(self, date=None, proxy=None):
         if date is None:
             url = "{}/v7/finance/options/{}".format(
